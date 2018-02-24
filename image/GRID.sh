@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #SET YOUR TEMP DIRECTORY
 TMP='./tmp/'
 if [ ! -d "$TMP" ]; then mkdir TMP; fi
@@ -27,8 +29,8 @@ Y=$X
 if [ ! -z "$3" ] ; then Y=$3 ; fi
 
 #SET THE SIZE 
-WIDTH=$(($(sudo identify -format '%w' $1)/$X))
-HEIGHT=$(($(sudo identify -format '%h' $1)/$Y))
+WIDTH=$(($(identify -format '%w' $1)/$X))
+HEIGHT=$(($(identify -format '%h' $1)/$Y))
 
 #DISPLAY
 
